@@ -35,18 +35,30 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
   static get styles() {
     return [super.styles,
     css`
-      :host {
-        display: block;
-        color: var(--ddd-theme-primary);
-        background-color: var(--ddd-theme-accent);
-        font-family: var(--ddd-font-navigation);
-      }
       .wrapper {
-        margin: var(--ddd-spacing-2);
-        padding: var(--ddd-spacing-4);
+        align-items: left;
+        margin: 0;
       }
-      h3 span {
-        font-size: var(--portfolio-sidebar-theme-label-font-size, var(--ddd-font-size-s));
+      .sidebar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f5a267;
+        height: 100%;
+        width: 250px;
+        position: fixed;
+      }
+      .page a {
+        position: fixed;
+        color: #4a4a4a;
+        margin: var(--ddd-spacing-10);
+        margin-bottom: 30px;
+      }
+      .page:hover a {
+        text-shadow: 2px 1px 5px black;
+        font-weight: bold;  
+        text-decoration: wavy;
+        color: white;
       }
     `];
   }
@@ -55,6 +67,14 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
 <div class="wrapper">
+  <div class="sidebar"></div>
+    <p class="page"><a href="#1">Home</a></p>
+      <br>
+    <p class="page"><a href="#2">About</a></p>
+      <br>
+    <p class="page"><a href="#3">Poop</a></p>
+      <br>
+    <p class="page"><a href="#4">Pee</a></p>
   <slot></slot>
 </div>`;
   }

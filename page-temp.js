@@ -30,8 +30,13 @@ export class TempPage extends DDDSuper(I18NMixin(LitElement)) {
     return [super.styles,
     css`
       .wrapper {
+        display: flex;
         height: 100vh;
         width: 100vw;
+        align-items: anchor-center;
+      }
+      .page-title {
+        margin: 0 auto;
       }
     `];
   }
@@ -40,6 +45,7 @@ export class TempPage extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
 <div class="wrapper">
+  <h3 class="page-title">Header</h3>
   <slot></slot>
 </div>`;
   }
