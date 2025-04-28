@@ -32,8 +32,8 @@ export class TempPage extends DDDSuper(I18NMixin(LitElement)) {
       .wrapper {
         display: flex;
         height: 100vh;
-        width: 100vw;
-        align-items: anchor-center;
+        width: calc(100vw  - 17px);
+        background-color: darkgray;
       }
       .page-title {
         margin: 0 auto;
@@ -45,7 +45,7 @@ export class TempPage extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
 <div class="wrapper">
-  <h3 class="page-title">Header</h3>
+  <h3 class="page-title">${this.title}</h3>
   <slot></slot>
 </div>`;
   }
