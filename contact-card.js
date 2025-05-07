@@ -94,8 +94,8 @@ export class ContactCard extends DDDSuper(I18NMixin(LitElement)) {
     return html`
 <div class="wrapper">
     <div class="header">
-        <h1 class="name">${this.name}</h3>
-        <h3 class="title">${this.title}</h1>
+        <h1 class="name">${this.name}></h3>
+        <h3 class="title">${this.title}></h1>
     </div>
     <div class="body">
         <div class="link">

@@ -58,7 +58,7 @@ export class DddCard extends DDDSuper((LitElement)) {
         flex-direction: column;
         word-wrap: break-word;
         box-sizing: border-box;
-        box-shadow: 0px 0px 12px;
+        box-shadow: 0px 0px 12px white;
       }
       .image {
         object-fit: cover; 
