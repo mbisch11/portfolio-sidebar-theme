@@ -31,12 +31,42 @@ export class TempPage extends DDDSuper(I18NMixin(LitElement)) {
     css`
       .wrapper {
         display: flex;
+        flex-direction: column;
         height: 100vh;
-        width: calc(100vw  - 17px);
+        width: calc(100vw  - 16px);
         background-color: darkgray;
+        box-shadow: 0px 0px 15px white inset;
+      }
+      .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: gray;
+        width: calc(100vw - 16px);
+        height: calc(100vh / 6);
+        box-shadow: 0px 1px 30px white;
+      }
+      .header-inglow{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100vw - 16px);
+        height: calc(100vh / 6);
+        box-shadow: 0px 0px 15px white inset;
       }
       .page-title {
-        margin: 0 auto;
+        text-decoration: none;
+        font-family: Futura,Trebuchet MS,Arial,sans-serif;
+        font-weight: var(--ddd-font-weight-black);
+        letter-spacing: var(--ddd-ls-72-lg);
+        font-size: 75px;
+      }
+      .page-content {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        width: calc(100vw  - 16px);
+        padding: var(--ddd-spacing-8);
       }
     `];
   }
@@ -45,8 +75,14 @@ export class TempPage extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
 <div class="wrapper">
-  <h3 class="page-title">${this.title}</h3>
-  <slot></slot>
+  <div class="header">
+    <div class="header-inglow">
+      <h3 class="page-title">${this.title}</h3>
+    </div>
+  </div>  
+  <div class="page-content">
+    <slot></slot>
+  </div>  
 </div>`;
   }
 

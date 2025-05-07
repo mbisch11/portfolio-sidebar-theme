@@ -11,6 +11,45 @@
   head, body{
     margin: 0px;
   }
+  p {
+    text-align: center;
+    font-family: Arial Narrow,Arial,sans-serif;
+    line-height: var(--ddd-lh-140);
+    letter-spacing: 1px;
+  }
+  .home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro-p {
+    width: 35vw;
+  }
+  .img-me{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border: 2px white;
+    filter: drop-shadow(0px 0px 10px white);
+    border-radius: 20px;
+  }
+  .research-h1{
+    text-align: center;
+    font-family: Arial Narrow,Arial,sans-serif;
+    font-size: xx-large;
+  }
+  .research-p{
+    width: 50vw;
+  }
+  .projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-cards{
+    display: flex;
+    justify-content: center;
+  }
 </style>
 <!--
 <portfolio-sidebar-theme #Contains sidebar#>
@@ -37,30 +76,79 @@
 -->
 <body>
   <portfolio-sidebar-theme>
-  <a name="1">
-    <page-temp title="Home">
-
+  <a name="1"></a>
+    <page-temp title="Michael Bischoff">
+      <div  class="home">
+        <p class="intro-p">Hi, I'm Michael Bischoff, a software developer and Human-Centered Design student at Penn State.
+          I specialize in building intuitive user interfaces, writing efficient backend logic, and connecting it all with thoughtful UX design.
+          From Android apps to data-driven systems, I focus on solving real-world problems with clean, maintainable code and accessible design.
+        </p>
+        <img class="img-me" src="./assets/images/Me_kinda_prof.jpg" alt="A picture of Michael Bischoff">
+        <p>^^That's me!^^</p>
+      </div>  
     </page-temp>
-  </a>
-  <a name="2">  
-    <page-temp title="About">
-
+  <a name="2"></a>
+    <page-temp title="Research">
+      <div  class="research">
+        <p class="research-p">I work at the ReSENSE lab here at Penn State. The ReSENSE Lab is a research group that brings together students, 
+          faculty, and developers to create smart, technology-driven solutions. Our work focuses on using artificial intelligence to develop 
+          useful platforms and devices that support communities. We actively share our research through competitions, conferences, and publications, 
+          helping to advance both academic and real-world innovation.
+        </p>
+        <h1 class="research-h1">
+          My Research
+        </h1>
+        <p class="research-p">
+          My research persists of using a mixture of artificial intelligence and UX-Integration to help seniors in need. Primarily, I'm aiming to 
+          assist seniors who suffer from loneliness, as that is a leading cause of many physical and mental issues as one gets older. The research
+          is still very early in the development process, but you can check it out <a href="https://www.resenselab.org/members#:~:text=LinkedIn%3A%20Link-,Michael%20Bischoff,-Research%20Intern%2004.2025">here!</a>
+        </p>
+      </div>  
     </page-temp>
-  </a>
-  <a name="3">  
+  <a name="3"></a>  
     <page-temp title="Projects">
-      
+      <div class="projects">
+        <p class="projects-p">
+            Here are some projects and assignments I've completed both as coursework, and as personal programs I've completed in my free time.
+        </p>
+        <div class="project-cards">
+          <ddd-card name="Assigneder"
+          image="./assets/images/Assigneder.png" 
+          href="https://github.com/rohanmatta/Assigneder">
+            A multi-feature Android app designed to help students manage assignments and courses. Built with a focus on UI clarity, persistent storage, and user accessibility.
+          </ddd-card>
+          <ddd-card name="KahootCheat"
+          image="./assets/images/Kahoot answers.png"
+          href="https://github.com/mbisch11/Kahootcheat">
+            A lightweight script designed to assist users during Kahoot games by displaying correct answers from game data in real time.
+          </ddd-card>
+          <ddd-card name="Link Preview Card"
+          image="./assets/images/Link Preview.png"
+          href="https://github.com/mbisch11/link-preview-card">
+            A custom link preview card component that displays metadata for URLs using open graph tags and is built using the Web Components API.
+          </ddd-card>
+        </div>  
+      </div>  
     </page-temp>
-  </a>
-  <a name="4">  
-    <page-temp  title="Contact">
-
+  <a name="4"></a>  
+    <page-temp  title="Contact Me">
+      <div class="contact">
+        <p class="contact-p">
+            If you'd like to contact me for business or research opportunities, feel free to reach out!
+        </p>
+        <contact-card class="contact-card" name="Michael Bischoff"
+        title="Human-Centered Design and Development Student"
+        github="https://github.com/mbisch11"
+        linkedIn="https://www.linkedin.com/in/michael-v-bischoff/"
+        email="mmb@psu.edu"></contact-card>
+      </div>  
     </page-temp>
-  </a>
 </portfolio-sidebar-theme>
   <script type="module">
     import "./portfolio-sidebar-theme.js"
     import "./page-temp.js"
+    import "./ddd-card.js"
+    import "./contact-card.js"
   </script>
   <script type="module" src="https://cdn.hax.cloud/cdn/build/es6/node_modules/@haxtheweb/scroll-button/scroll-button.js"></script>
 </body>

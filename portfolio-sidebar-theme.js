@@ -43,13 +43,14 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
       }
       .sidebar {
         display: flex;
+        flex-direction: column;
         align-items: center;
         background-color: #f5a267;
         height: 100%;
-        width: 250px;
+        width: 150px;
         position: fixed;
-        padding: var(--ddd-spacing-5);
-        border-right: 5px groove white; 
+        padding: var(--ddd-spacing-4);
+        box-shadow: 1px 0px 10px white; 
       }
       scroll-button {
         position: fixed;
@@ -58,9 +59,9 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
         right: 0;
       }
       .page a {
-        display: inline-flex;
+        display: flex;
         color: #4a4a4a;
-        margin-bottom: 30px;
+        margin-bottom: var(--ddd-spacing-8);
       }
       .page:hover a {
         text-shadow: 2px 1px 5px black;
@@ -77,8 +78,7 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
 <div class="wrapper">
   <div class="sidebar">
     <p class="page"><a href="#1">Home</a></p>
-      <br>
-    <p class="page"><a href="#2">About</a></p>
+    <p class="page"><a href="#2">Research</a></p>
     <p class="page"><a href="#3">Projects</a></p>
     <p class="page"><a href="#4">Contact</a></p>
   </div>
