@@ -24,14 +24,16 @@
   }
   .intro-p {
     width: 35vw;
+    margin: 0 auto;
   }
   .img-me{
-    width: 400px;
-    height: 400px;
+    width: calc(100vw/5);
+    height: calc(100vh/3);
     object-fit: cover;
     border: 2px white;
     filter: drop-shadow(0px 0px 10px white);
     border-radius: 20px;
+    margin: var(--ddd-spacing-2);
   }
   .research-h1{
     text-align: center;
@@ -45,6 +47,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .projects-p{
+    margin: 2px;
   }
   .project-cards{
     display: flex;
@@ -84,7 +89,7 @@
           From Android apps to data-driven systems, I focus on solving real-world problems with clean, maintainable code and accessible design.
         </p>
         <img class="img-me" src="./assets/images/Me_kinda_prof.jpg" alt="A picture of Michael Bischoff">
-        <p>^^That's me!^^</p>
+        <p class="intro-p">^^That's me!^^</p>
       </div>  
     </page-temp>
   <a name="2"></a>

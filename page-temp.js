@@ -59,7 +59,9 @@ export class TempPage extends DDDSuper(I18NMixin(LitElement)) {
         font-family: Futura,Trebuchet MS,Arial,sans-serif;
         font-weight: var(--ddd-font-weight-black);
         letter-spacing: var(--ddd-ls-72-lg);
-        font-size: 75px;
+        font-size: calc(100vh/8);
+        margin-top: calc(25vh/12);
+        margin-bottom: 2px;
       }
       .page-content {
         display: flex;
